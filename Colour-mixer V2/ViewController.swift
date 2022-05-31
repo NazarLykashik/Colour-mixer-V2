@@ -95,7 +95,7 @@ extension ViewController: UITextFieldDelegate{
         view.endEditing(true) //скрывает клавиатуру, вызванную для любого объекта
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        print(#function)
         guard let text = textField.text else { return }
         
         if let currentValue = Float(text) {
@@ -137,7 +137,7 @@ extension ViewController {
     }
     
     @objc private func didTapDone() {
-        view.endEditing(true)
+        self.view.endEditing(true)
     }
     
     private func showAlert(title: String, message: String) {
